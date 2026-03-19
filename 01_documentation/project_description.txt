@@ -1,0 +1,16 @@
+Cellranger processing finished. Some strangeness:
+Low fraction confidently mapped reads in cells
+2 major groups of cells recovered with very different UMI recovery
+ 
+ 
+1 due to high ambient RNA from whole blood?
+2 and 3 possibly due to RBC contamination? 
+ 
+Per the 10x documentation here, this shouldn’t look much different than PBMCs. Could this reflect imperfect leukocyte isolation?  
+
+Per discussion with Anna, this looked as expected given:
+lots of sample handling
+leukocyte isolation went poor
+Few cells were loaded (trial run)
+
+I think the current plan is to not too much more with these samples, as they were just a pilot. We may redo this with better samples? unclear

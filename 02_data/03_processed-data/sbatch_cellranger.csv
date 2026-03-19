@@ -1,0 +1,21 @@
+#!/bin/bash
+
+# Job Options- must be before *any* executable lines
+
+#SBATCH --job-name="cellranger"
+#SBATCH --output=cellranger.out
+#SBATCH --error=cellranger.err
+#SBATCH --nodes=1                # node count
+#SBATCH --ntasks=1               # total number of tasks across all nodes
+#SBATCH --cpus-per-task=12        # cpu-cores per task (>1 if multi-threaded tasks) ## Gizmo nodes have 36 cores
+#SBATCH --mem-per-cpu=12G        # memory per cpu-core
+#SBATCH --time=48:00:00          # total run time limit (HH:MM:SS)
+#SBATCH --mail-type=begin        # send email when job begins
+#SBATCH --mail-type=end          # send email when job ends
+#SBATCH --mail-type=fail         # send email if job fails
+#SBATCH --mail-user=dgratz@fredhutch.org
+
+
+cd /fh/fast/_IRC/FHIL/grp/analyses/FL025/02_data/03_processed-data
+module load CellRanger
+cellranger multi --id FL025_force6kcells --csv samplesheet.csv

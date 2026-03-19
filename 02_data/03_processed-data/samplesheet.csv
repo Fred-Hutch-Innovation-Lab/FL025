@@ -1,0 +1,15 @@
+[gene-expression]
+reference,/fh/fast/_IRC/FHIL/pub/ref/GRCh38/refdata-gex-GRCh38-2024-A
+probe-set,/fh/fast/_IRC/FHIL/pub/ref/GRCh38/Chromium_Human_Transcriptome_Probe_Set_v1.1.0_GRCh38-2024-A.csv
+create-bam,false
+emptydrops-minimum-umis,100
+
+[libraries]
+fastq_id,fastqs,feature_types
+FL025,/fh/fast/_IRC/FHIL/grp/analyses/FL025/02_data/01_raw-data/,Gene Expression
+
+[samples]
+sample_id,probe_barcode_ids,force_cells
+P1-D0-F,BC001,6000
+P1-D7-F,BC002,6000
+
